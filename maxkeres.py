@@ -20,7 +20,7 @@ fout = open("3feladat.txt",'w')
 width = 3 # in this range left and right will the script compare numbers
 maxes = []
 allDistances = []
-for f in range(len(files)-6): # in all files
+for f in range(6, len(files)): # in all files
     data = np.loadtxt(files[f], skiprows=8)
     localMaxPlaces = [] # the x value at the max
     localMaxValues = [] # the f(x) value at the max

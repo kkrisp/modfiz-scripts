@@ -1,25 +1,14 @@
 set term png size 800, 400
 
 set key top left
+set grid
 
 set xlabel 'U2 [V]'
 set ylabel 'Ia [nA]'
 
-# - - - phase diagram
-set output 'neon_all.png'
-plot "2018-1-25-15.14_data_Ne.dat" every ::9 with lines title '1.46V; 7.42V',\
-     "2018-1-25-15.9_data_Ne.dat"  every ::9 with lines title '1.13V; 7.42V',\
-     "2018-1-25-15.4_data_Ne.dat"  every ::9 with lines title '1.97V; 7.42V',\
-     "2018-1-25-15.18_data_Ne.dat" every ::9 with lines title '1.71V; 7.41V',\
-     "2018-1-25-15.27_data_Ne.dat" every ::9 with lines title '1.71V; 8.20V',\
-     "2018-1-25-15.23_data_Ne.dat" every ::9 with lines title '1.72V; 7.80V'
-
 # - - - population diagram
 set output 'mercury_all.png'
 
-plot "2018-1-25-16.0_data_Hg%0D%0A.dat" every ::9 with lines title '8.00V; 1.50V',\
-    "2018-1-25-15.52_data_Hg%0D%0A.dat" every ::9 with lines title '6.81V; 1.50V',\
-    "2018-1-25-16.4_data_Hg%0D%0A.dat"  every ::9 with lines title '7.40V; 1.50V',\
-    "2018-1-25-17.55_data_Hg%0D%0A.dat" every ::9 with lines title '7.38V; 1.10V',\
-    "2018-1-25-18.2_data_Hg%0D%0A.dat"  every ::9 with lines title '7.40V; 1.90V',\
-    "2018-1-25-15.57_data_Hg%0D%0A.dat" every ::9 with lines title '7.41V; 1.50V'
+plot\
+    "../2018-1-25-16.4_data_Hg%0D%0A.dat"  every ::9 with lines title '7.40V; 1.50V',\
+    "../2018-1-25-15.57_data_Hg%0D%0A.dat" every ::9 with lines title '7.41V; 1.50V'
