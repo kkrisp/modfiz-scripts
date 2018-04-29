@@ -1,0 +1,43 @@
+set term png size 800, 400
+
+set key top left
+
+set xlabel 'U2 [V]'
+set ylabel 'Ia [nA]'
+set grid
+
+# - - - Neon - U1 changing
+set output 'pics/neon_U1.png'
+plot\
+"dummy.dat" lc 'white' title 'U1     U3   ',\
+"2018-1-25-15.4_data_Ne.dat"  every ::9 with lines lc 1 title '1.97V; 7.42V',\
+"2018-1-25-15.18_data_Ne.dat" every ::9 with lines lc 2 title '1.71V; 7.41V',\
+"2018-1-25-15.14_data_Ne.dat" every ::9 with lines lc 3 title '1.46V; 7.42V',\
+
+# - - - Neon U3 changing
+set output 'pics/neon_U3.png'
+plot\
+"dummy.dat" lc 'white' title 'U1     U3   ',\
+"2018-1-25-15.18_data_Ne.dat" every ::9 with lines lc 1 title '1.71V; 7.41V',\
+"2018-1-25-15.23_data_Ne.dat" every ::9 with lines lc 2 title '1.72V; 7.80V',\
+"2018-1-25-15.27_data_Ne.dat" every ::9 with lines lc 3 title '1.71V; 8.20V',\
+
+# - - - Hg - U1 changing
+set output 'pics/hg_U1.png'
+plot\
+"dummy.dat" lc 'white' title 'U1     U3   ',\
+"2018-1-25-15.52_data_Hg%0D%0A.dat" every ::9 with lines lc 1 title '6.81V; 1.50V',\
+"2018-1-25-15.57_data_Hg%0D%0A.dat" every ::9 with lines lc 3 title '7.41V; 1.50V',\
+"2018-1-25-16.0_data_Hg%0D%0A.dat"  every ::9 with lines lc 4 title '8.00V; 1.50V',\
+
+# - - - Hg - U1 changing
+set output 'pics/hg_U3.png'
+
+plot\
+"dummy.dat" lc 'white' title 'U1     U3   ',\
+"2018-1-25-17.55_data_Hg%0D%0A.dat" every ::9 with lines lc 1 title '7.38V; 1.10V',\
+"2018-1-25-16.4_data_Hg%0D%0A.dat"  every ::9 with lines lc 2 title '7.40V; 1.50V',\
+"2018-1-25-18.2_data_Hg%0D%0A.dat"  every ::9 with lines lc 4 title '7.40V; 1.90V',\
+
+# - - - fura adatsor
+# "2018-1-25-15.57_data_Hg%0D%0A.dat" every ::9 with lines lc 3 title '7.41V; 1.50V',\
